@@ -85,17 +85,54 @@ inherited routines cames in:
 #### Multiple inheritance
 
 #### Why are there so many rules for inheritance ?
+* to manage complexity
+* when to use inheritance and when to use containment
+1. if multiple classes share common data but not behavoir, create a common object that those classes can contain
+2. if ... share common behavoir but not data, derive them from a common base class that defines the common routines
+3. if ... share common data and behavoir, inherit from a common base class that defines the common data and routines
+4. inherit when you want base class to control your IF, contain when you want to control your IF
 
 ---
 ### Member functions and data
+* **Guidelines** for implementing member functions and member data **effectively**
+
+1. keep the number of routines in a class as small as possible
+2. disallow implicitly generated member functions and operators you don't want
+3. minimize the number of different routines called by a class
+4. minimize indirect routine calls to other classes
+5. in general, minimize the extent to which a class collaborates with other classes
 
 ### Constructors
+* Guidelines
+1. initialize all member data in all constructors, if possible
+2. enforce the singleton property by using a **private** constructor
+3. prefer deep copies to shallow copies until proven otherwise
 
 ## 6.4 Reasons to create a class
+* Good reasons to create a class:
+1. model real-world objects
+2. model abstract objects
+3. **reduce complexity**
+4. isolate complexity
+5. hide implementation details
+6. limit effects of changes
+7. hide global data
+8. streaming parameters passing
+9. make central points of control --- similiar to information hiding ,but more heuristic power
+10. facilitate reusable code --- NASA's example
+11. plan for a family of programs --- what the whole family of programs might look like?
+12. package related operations
+13. accomplish a specific refactoring
 
 ### classes to avoid
+* avoid creating god classes
+* eliminate irrelevant classes
+* avoid classes named after verbs
+
 ### summary
 
 ## 6.5 language-specific issues
+* class-related areas that vary significantly **depending on th language**
+* ...
 
 ## 6.6 Beyond classes: packages
