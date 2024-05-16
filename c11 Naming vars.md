@@ -1,85 +1,90 @@
 
-### 11.1 Considerations in choosing good names
+### 12.1 Numbers in general
+Guidelines to make use of numbers less error-prone:
+* Avoid "magic numbers"
+* Use hard-coded 0s and 1s if you need to
+* Anticipate divide-by-zero errors
+* Make type conversions obvious
+* Avoid mixed-type comparision
+`KP:` Heed your compiler's warnings
 
-1. The most inportant naming consideration
+### 12.2 Integers
+1. check for integer division
+2. check for integer overflow
+3. check for overflow in intermediate results
 
-`KP:` the name fully and accurately describe the entity the var represents
+### 12.3 Floating-point numbers
+1. Avoid additions and subtractions on numbers that have greatly different magnitudes
+2. Avoid equality comparisons
+    + one effective approach is to determin a range of accuracy that is acceptable and then use a boolean function to determin whether the values are close enough.
+3. Anticipate rounding errors
+    + change to a var type that has greater precision
+    + change to binary coded decimal (BCD) var
+    + change from floating-point to integer var
+4. Check language and lib support for specific data types
 
-2. Problem orientation
+### 12.4 Characters and strings
+1. Avoid magic characters and strings
+2. Watch for off-by-one errors
+3. Know how your language and environment support Unicode
+    + if you decide to use Unicode strings, decide where and when to use them.
+4. Decide on an internationalization/localization strategy early in the lifetime of a program.
+    + `key consideration:` whether to store all strings in an exteranl resource and whether to create separate builds for each language or to determine the specific language at run time.
+5. If you know you only need to support a single alphabetic language, consider using an `ISO 8859` character set
+6. If you need to support multiple languages, use Unicode
+7. Decide on a consistent conversion strategy among string types
 
-`KP:` A good name generally speaks to **the problem** rather than **the solution**.
+Strings in C
 
-3. Optimum name length
-    + 8 to 20 characters generally (more easy to debug)
+`KP:` C++ standard template lib string class has eliminated most of the traditional problems with strings in C. For programmers working with C strings, some ways to avoid common pitfalls:
+* Be aware of the difference between string pointers an character arrays.
+    + In C, assignments do not copy string literals to a string var
+    ```
+    strPtr = "Some text string"
+    ```
+    + Use a naming convention to indicate whether the var are arrays of characters or pointers to strings
+* Declare C-style strings to have length `CONSTANT + 1`
+* Init strings to null(`\0`) to avoid endless strings
+* Use arrays of characters instead of pointers in C
+* Use strncpy() instead of strcpy() to avoid endless strings
 
-4. The effect of scope on var names
-    + Use qualifiers on names that are in the global namespace
+### 12.5 Boolean vars
+1. Use boolean vars to document your program - `boolean expression`
+2. Use boolean vars to simplify complicated tests.
+3. Create your own boolean type, if necessary (not defined with the platform)
 
-5. Computed-value qualifiers in var names
-6. Common opposites in var names
+### 12.6 Enum types
+1. Use enumerated types for readability
+2. Use enumerated types for reliability
+3. Use enumerated types for modifiability
+4. ... as an alternative to boolean vars
+5. Check for invalid values
+6. Define the first and last entries of an enumeration for use as loop limits
+7. Reserve the first entryin the enum type as invalid
+8. Define precisely how First and Last ele are to be used in the project coding standard, and use them consistently.
+9. Beware of pitfalls of assigning explicit values to ele of an enumeration
 
-### 11.2 Naming specific types of data
+### 12.7 Named constants
+1. Use named constants in data declarations
+2. Avoid literals, even `safe` ones
+3. Simulate named constants with appropriatedly scoped vars or classes
+4. Use named constants consistently
 
-1. naming loop indexes
-2. naming status vars
-    + think of a *better name* than flag for *status vars*
-3. naming temp vars
-    + be leery of "temporay" vars, temp var also needs specific meaning
-4. naming boolean vars
-    + keep typical boolean names in mind - *done, error, found, success, ok*
-    + give boolean vars names that imply *true or false*
-    + use positive boolean var names
-5. naming enumerated types -  with specific *prefix*
-6. naming constants
+### 12.8 Arrays
+1. Make sure that all array indexes are within the bounds of the array
+2. Consider using containers instead of arrays, or think of arrays as sequential structure - `sets/stacks/queues,etc`
+3. Check the end points of arrays
+4. If an array is multidimensional, make sure its subscripts are used in the correct order.
+5. Watch out for index cross-talk - switching loop indexes is called `index cross-talk`
+6. In C, use the `ARRAY_LENGTH()` macro to work with arrays
 
-### 11.3 The power of naming conventions
-1. why have conventions ? - conventions offer benefits:
-    + they let you take more for granted.
-    + they help you transfer knowledge across projects.
-    + they help you learn code more quickly on a new project
-    + they reduce name proliferation
-    + they compensate for language weaknesses
-    + they emphasize relationships among related items
-
-2. when you should have a naming conventions
-    + when multi programmer are working on a project
-    + when you plan to turn a program over to another programmer for modification/maintenance
-    + when your programs are reviewed by other programmers in your org.
-    + when your program is so large
-    + when the program will be long-lived enough
-    + when you have a lot of unusual terms and want to have standard terms to use in coding.
-
-3. Degrees of formality
-
-### 11.4 Informal naming conventions
-1. Guidelines for a language-independent convention
-2. Guidelines for language-specific conventions - c/c++/java
-3. Mixed-language programming considerations
-
-### 11.5 Standardized prefixes
-1. user-defined type abbreviations (UDT)
-2. advantages of standardized prefixes
-    + add precision to several ares of naming
-    + make names more compact
-    + allow you to check types accurately when using ADT(abstract data types) that your compiler can't necessarily check.
-
-### 11.6 Creating short (for readable)
-1. General abbreviation guidelines
-2. Comments on abbreviation
-### 11.7 Kinds of names to avoid
-1. avoid misleading names or abbreviations
-2. avoid names with similar meanings
-3. avoid vars with different meanings but similar names
-4. avoid names that sound similar, such as wrap and rap.
-5. avoid numerals in names
-6. avoid misspelled words in names
-7. avoid words that are commonly misspelled in English
-8. don't differentiate var names solely by capitalization
-9. avoid multiple natural language
-10. avoid the names of standard types, variables, and routines
-11. don't use names that are totally unrelated to what the var represent
-12. avoid names containing hard-to-read characters
-
+### 12.8 Creating your own types
+Guidelines for creating your own types:
+1. create types with functionally oriented names - use type names that refer to the real-word problem
+2. avoid predefined types
+3. don't redefine a predefined type
+4. define substitute types for portability
+5. consider creating a class rather than using a typedef
 
 ---
 ### checklist
