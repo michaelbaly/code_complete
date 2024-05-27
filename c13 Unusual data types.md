@@ -69,3 +69,39 @@ KP: Even if global vars don't always produce errors, however, they're hardly eve
     + Code reuse hindered by global data
     + Uncertain initialization-order issues with global data
     + Modularity and intellectual manageability damaged by global data
+
+2. Reasons to use global data - useful in several situations
+    + Preservation of global values
+    + Emulation of named constants - some language like python/perl/awk don't support named constants
+    + Emulation of enumerated types
+    + Streamlining use of extremely common data
+    + Eliminating tramp data
+
+3. Use global data only as a last resort
+    + Begin by making each var local and make var global ony as you need to
+    + Distinguish between global and class vars
+    + Use access routines
+
+4. Using access routines instead of global data - anything you can do with global data, you can do better with access routines
+
+    Advantages of access routines:
+    + you get centralized control over the data
+    + you can ensure that all refs to the var are barricaded
+    + benefits of information hiding auto
+    + access routines are easy to convert to an abstract data types
+    
+    How to use access routines:
+    + require all code to go through the access routines for the data
+    + don't just throw all your global data into the same barrel
+    + use locking to control access to global vars
+    + build a level of abstraction into your access routines - `build access routines at the level of problem domain rather than at the level of the implementation details`
+    + keep all accessees to the data at the same level of abstraction
+
+5. How to reduce the risks of using global data
+    + develop a naming convention that makes global var obvious
+    + create a well-annotated list of all your global vars
+    + don't use global var to contain intermediate results
+    + don't pretend you're not using global data by putting all your data into a monster obj and passing it everywhere
+
+---
+checklist
