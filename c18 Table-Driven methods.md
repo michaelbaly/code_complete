@@ -21,3 +21,20 @@ A table-driven method is a `schema` that allows you to look up information in ta
     + `table-driven approach`
 4. fudging lookup keys - several ways:
     + duplicate information to make the key work directly
+    + transform the key to make it work directly
+    + isoloate the key transformation in its own routine
+
+### 18.3 Indexed access tables
+```
+Array of indexes -> lookup table
+```
+
+### 18.4 Stair-Step access tables
+`KP:` it doesn't waste as much data space
+Considerations:
+1. watch the endpoints
+2. consider using a binary search rather than a sequential search (`spell error in page428`)
+3. consider using indexed access instead of the stair-step technique
+4. put the stair-step table lookup into its own routine
+
+### 18.5 other examples of table lookups
