@@ -14,7 +14,7 @@ Testing is a hard activity for most developers to swallow for several reasons:
 * testing by itself does not improve SW quality.
 * testing requires you to assume that you'll find errors in your code.
 
-![alt text](image-13.png)
+![alt text](images/image-13.png)
 
 Testing during construction
 

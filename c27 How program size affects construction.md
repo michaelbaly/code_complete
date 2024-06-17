@@ -15,7 +15,7 @@ the pleasant success you had envisioned.
 
 ### 27.3 Effect of project size on errors
 * both quantity and type of errors are affected by project size
-![alt text](image-21.png)
+![alt text](images/image-21.png)
 
 * `KP:` as the kinds of defects change with size, so do the numbers of defects; the product that's twice as large is likely to have more than twice as many errors
 
@@ -29,7 +29,7 @@ the pleasant success you had envisioned.
 * small project, 65% in construction
 * medium-size, 50% ...
 * on very large projects, arch, integration, and system testing take up more time and construction becomes less dominant.
-![alt text](image-22.png)
+![alt text](images/image-22.png)
 
 #### Programs, products, systems, and system products
 

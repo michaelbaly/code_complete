@@ -28,7 +28,7 @@ Guidelines for avoiding initialization problems:
 ### 10.4 Scope
 1. Localize Ref to vars
 2. Keep vars "live" fro as short a time as possible
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 `KP:`Measuring the LT(live time) of a var
 3. General guidelines for minimizing scope
     + Init vars used in a loop immediately before the loop **rather than** back at the beginning of the routine containing the loop.

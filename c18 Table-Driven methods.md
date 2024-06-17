@@ -13,8 +13,8 @@ A table-driven method is a `schema` that allows you to look up information in ta
 1. ...
 2. ...
 3. Flexible-Message-Format example
-![alt text](image-9.png)
-![alt text](image-10.png)
+![alt text](images/image-9.png)
+![alt text](images/image-10.png)
 
     + logic-based approach
     + obj-oriented approach

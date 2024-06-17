@@ -14,7 +14,7 @@ if S1 and S2 then ...
 * there is simply no reliable substitute for *measuring* results
 
 #### Substitute table lookups for complicated expressions
-![alt text](image-17.png)
+![alt text](images/image-17.png)
 
 #### Use lazy evaluation
 * If a program uses lazy evaluation, it avoids doing any work until the work is needed. Lazy evaluation is similar to just-in-time strategies that do the work closest to when it’s needed.
@@ -22,7 +22,7 @@ if S1 and S2 then ...
 ### 26.2 Loops - make the loop itself faster (find hot spots)
 
 #### Unswitching 
-![alt text](image-18.png)
+![alt text](images/image-18.png)
 * this example - the effect of any specific code tunning is not predicatable
 
 #### Jamming
@@ -35,14 +35,14 @@ if S1 and S2 then ...
 #### Minimizing the work inside the loop
 * one key to writing effective loops is to minimize the work done inside a loop.
 * if you can evaluate a statement or part of a statement outside a loop so that the result is used inside the loop, do so. it's `good programming practice, and in some cases it improves readability`
-![alt text](image-19.png)
+![alt text](images/image-19.png)
 
 #### Sentinel values
 * the sentinel technique can be applied to virtually any situation in which you use a linear search-to linked lists as well as arrays.
 * careful about how you choose and put the sentinel value
 
 #### Putting the busiest loop inside
-![alt text](image-20.png)
+![alt text](images/image-20.png)
 
 #### Strength reduction
 * means replacing an expensive operation such as multiplication with a cheaper operation such as addition

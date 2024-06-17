@@ -2,7 +2,7 @@
 
 1. use a return when it enhances readability - expected result, return immediately; write more code when detects an error
 2. use guard clause(early returns or exit) to simplify complex error processing
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 3. minimize the number of returns in each routine - `use return only when they improve readability`
 
@@ -31,7 +31,7 @@
 Comparison of the approaches - keep consistency with each approach
 
 8. gotos and sharing code in an *else* clause
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
 Summary of guidelines for using gotos:
 * use gotos to emulate structured control constructs in languages that don't support them directly.

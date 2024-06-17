@@ -57,7 +57,7 @@ It’s not hard to avoid deep nesting. If you have deep nesting, you can redesig
 4. convert a nested `if` to a case statement
 5. factor deeply nested code into its own routine
 6. use a more object-oriented approach
-    ![alt text](image-11.png)
+    ![alt text](images/image-11.png)
 7. redesign deeply nested code
 
 ### 19.5 A programming fundation: structured programming

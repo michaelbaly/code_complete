@@ -135,4 +135,4 @@ Guidelines:
 * target high-complexity modules
 * in a maintenance environment, improve the parts you touch
 * define an interface between clean code and ugly code, and then move code across the interface
-![alt text](image-16.png)
+![alt text](images/image-16.png)

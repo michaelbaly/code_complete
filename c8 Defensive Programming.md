@@ -82,7 +82,7 @@ Suggestions for realizing the benefits of exceptions and avoiding the difficulti
 
 Barricades are a damage-containment strategy.
 
-![Barricades](image.png)
+![Barricades](images/image.png)
 
 Convert input data to the proper type at input time - ASAP after input
 
@@ -107,7 +107,7 @@ Convert input data to the proper type at input time - ASAP after input
     + Use a built-in preprocessor
     + Write your own preprocessor
     + Use debugging stubs
-    ![alt text](image-1.png)
+    ![alt text](images/image-1.png)
 
 ### 8.7 Determining how much defensive programming to leave in production code
 

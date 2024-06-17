@@ -24,11 +24,11 @@ General tips on pointers
 5. Check the var referenced by the pointer before using it
 6. Use `dog-tag` fields to check for corrupted memory
     + `dog-tag` is a field you add to a structure soley for the purpose of error checking
-    ![alt text](image-5.png)
+    ![alt text](images/image-5.png)
 7. Add explicit redundancies
     + An alternative to using a tag field is to use certain fields twice.
 8. Use extra pointer variables for clarity
-    ![alt text](image-6.png)
+    ![alt text](images/image-6.png)
 9. Simplify complicated pointer expressions
 10. Draw a picture
 11. Delete pointers in linked lists in the right order

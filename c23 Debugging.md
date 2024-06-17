@@ -5,7 +5,7 @@ Debugging is the process of identifying the root cause of an error and correctin
 #### 1. role of debugging in software quality
 * it's a way to diagnose defects
 #### 2. variations in debugging performance
-![alt text](image-14.png)
+![alt text](images/image-14.png)
 
 #### 3. defects as opportunities - you can:
 * learn about the program you're working on
@@ -43,7 +43,7 @@ assume that it is
 * exercise the code in your unit test suite
 * use available tools
 * reproduce the error several different ways
-    ![alt text](image-15.png)
+    ![alt text](images/image-15.png)
 * generate more data to generate more hypothesis
 * use the results of negative tests
 * brainstorm for possible hypotheses

@@ -9,7 +9,7 @@
 
 `steps in building a routine`
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 ### 9.2 Pseudocode for pros
 
@@ -32,7 +32,7 @@
 
 2. Code the routine
 
-    ![alt text](image-3.png)
+    ![alt text](images/image-3.png)
 
 3. Check the code
     + mentally check the routine for errors - `KP:` A working routine isn't enough. If you don't know why it works, study it, discuss it, and experiment with alternative designs until you do.

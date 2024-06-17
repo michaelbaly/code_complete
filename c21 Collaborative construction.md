@@ -95,4 +95,4 @@ standards, and the reasons for making the code meet the standards are good topic
 3. dog-and-pony shows
 
 
-![alt text](image-12.png)
+![alt text](images/image-12.png)
