@@ -61,5 +61,58 @@ for i = 1 to maxElmts – 1 -- fixed error #A423 10/1/05 (scm)
 * use comments to prepare the reader for what is to follow
 * make every comment count
 * document surprises
+* avoid abbreviations - comments should be unambiguous, readable without the work of figuring out abbreviations.
+* differentiate between major and minor comments
+* comment anything that gets around an error or an undocmented feature in a language or an environment.
+* justify violations of good programming style
+* don't comment tricky code; rewrite it 
+
+#### Commenting data declarations
+* comment the units of numeric data
+* comment the range of allowable numeric values
+* comment coded meanings
+* comment limitations on input data
+* document flags to the bit level
+* stamp comments related to a variable with the variable's name
+* document global data
+
+#### Commenting control structures
+* put a comment before each *if, case, loop, or block* of statements
+* comment the end of each control structure
+* treat end-of-loop comments as a warning indicating complicated code - the loop might need to be simplified.
+
+#### Commenting routines
+* keep comments close to the code they describe
+* describe each routine in one or two sentences at the top of the routine
+* document parameters where they are declared
+* take advantage of code documentation utilities such as Javadoc
+* differentiate between input and output data
+* document interface assumptions
+* comment on the routine's limitations
+* document the routine's global effects
+* document the source of algorithms that are used
+* use comments to mark parts of your program
+
+#### Commenting classes, files, and programs
+1. for class docs
+    + describe the design approach to the class
+    + describe limitations, usage assumptions, and so on
+    + comment the class interface
+    + don't document implementation details in the clas interface
+
+2. for files docs
+    + describe the purpose and contents of each file
+    + put your name, e-mail address, and phone number in the block comment
+    + include a version-control tag
+    + include legal notices in the block comment
+    + give the file a name related to its contents
 
 ### 32.6 IEEE standards
+
+1. software-development standards
+2. software quality-assurance ...
+3. management ...
+4. overview of standards
+
+---
+checklist
